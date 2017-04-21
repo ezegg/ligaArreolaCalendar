@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Crear calendario para torneo de futbol a 16 equipos</title>
+		<meta http-equiv="Content-Language" content="es" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Aplicacion para generar calendario on-line utile para gestionar torneo o campeonato de futbol con dieciseis equipos" />
+		<meta name="keywords" content=" fixture hacer calendario torneo de futbol crear calendario a 16 equipos"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+		<link rel="SHORTCUT ICON" href="../../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../../style2017/style2017.css" />
+		<link rel="stylesheet" type="text/css" href="../../stylecss/stylestampa.css" media="print" />
+		<link rel="stylesheet" media="only screen and (min-width: 310px) and (max-width: 480px)" href="../../style2017/mobil.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../../jq/mostrar.js"></script>
+
+</head>
+
+<body>
+
+
+	<div id="content"> <!-- Contenitore Nav Campionati nel mondo Calendario pubbl -->
+
+			<!-- DIV per richiamare menu  -->
+			<div id="menu">
+			</div>
+
+		<script type="text/javascript">
+		Number.prototype.toRoman = function () {
+		var _r = [
+		"M",1000,"CM", 900,"D", 500, "CD", 400, "C", 100,"XC", 90,"L", 50, "XL", 40,
+		"X", 10, "IX", 9, "V", 5, "IV", 4,"I", 1
+		],
+		n = this, i = 0, output = "";
+		while ( n>0 ) {
+		if ( n >= _r[i+1] ) {
+		output += _r[i];
+		n -= _r[i+1];
+		} else {
+		i += 2;
+		}
+		}
+		return output;
+		}
+		var giornate = [
+		[0,1,
+		2,3,
+		4,5,
+		6,7,
+		8,9,
+		10,11,
+		12,13,
+		14,15
+		],
+		[11,6,
+		13,2,
+		15,8,
+		7,10,
+		1,14,
+		3,4,
+		9,12,
+		5,0
+		],
+		[0,9,
+		7,11,
+		2,1,
+		4,15,
+		6,5,
+		8,13,
+		10,3,
+		14,12
+		],
+		[13,4,
+		15,6,
+		0,10,
+		1,7,
+		3,5,
+		9,11,
+		12,8,
+		14,2
+		],
+		[11,14,
+		15,1,
+		2,4,
+		8,3,
+		9,13,
+		5,7,
+		10,6,
+		12,0
+		],
+		[13,0,
+		7,8,
+		1,12,
+		3,15,
+		4,10,
+		6,2,
+		5,11,
+		14,9
+		],
+		[11,3,
+		15,13,
+		0,14,
+		2,7,
+		1,6,
+		8,4,
+		9,10,
+		12,5
+		],
+		[11,2,
+		13,14,
+		7,3,
+		4,1,
+		6,12,
+		8,0,
+		5,9,
+		10,15
+		],
+		[15,11,
+		0,4,
+		2,5,
+		1,13,
+		3,6,
+		9,7,
+		12,10,
+		14,8
+		],
+		[11,13,
+		7,15,
+		2,12,
+		3,9,
+		4,14,
+		6,0,
+		5,1,
+		10,8
+		],
+		[13,10,
+		15,5,
+		0,3,
+		1,11,
+		8,2,
+		9,6,
+		12,4,
+		14,7
+		],
+		[11,0,
+		7,12,
+		2,15,
+		3,1,
+		4,9,
+		6,8,
+		5,13,
+		10,14
+		],
+		[13,3,
+		0,7,
+		1,10,
+		4,6,
+		8,11,
+		9,2,
+		12,15,
+		14,5
+		],
+		[11,4,
+		15,9,
+		7,13,
+		2,0,
+		1,8,
+		3,12,
+		6,14,
+		5,10
+		],
+		[13,6,
+		0,15,
+		4,7,
+		8,5,
+		9,1,
+		10,2,
+		12,11,
+		14,3
+		]
+		]
+		function creaCalendario(){
+		var sHTML = "",
+		squadre = document.getElementsByName("txtSquadre");
+		for (var g =0;g<giornate.length;g++){
+		sHTML +="<div id='gio'><p>"+(g+1).toRoman()+". Jornada</p><ul>";
+		for (var i = 0; i < giornate[g].length; i+=2){
+		sHTML+="<li>"+squadre[giornate[g][i]].value+" - "+squadre[giornate[g][i+1]].value+"</li>";
+		}
+		sHTML +="</ul></div>";
+		}
+		document.getElementById("visscalendario").innerHTML = sHTML;
+		}
+		</script>
+
+
+		<div id="crea_calendario">
+		<h5>Liga Arreola torneo</h5>
+
+
+				<div class="content_float">
+
+				<label>Equipo 1:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 2:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 3:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 4:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 5:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 6:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 7:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 8:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+
+				</div>
+
+				<div class="content_float">
+
+				<label>Equipo 9:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 10:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 11:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 12:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 13:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 14:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 15:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+				<label>Equipo 16:</label><input name="txtSquadre" size="25" maxlength="42" type="text"><br>
+
+				</div>
+
+				<button onclick="creaCalendario()">Crea calendario</button>
+
+
+		<div id="visscalendario">
+
+		</div>
+
+  </div>
+
+
+</body>
+</html>
