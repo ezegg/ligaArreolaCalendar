@@ -234,6 +234,627 @@
 
   </div>
 
+  <style media="screen">
+  *{
+margin: 0px 0px;
+padding: 0px 0px;
+font-family: sans-serif;
+}
+
+p{
+font-size: 12px;
+}
+/*--------------------      TESTA    ------------------------*/
+
+#testa{
+width: 1000px;
+margin: 0px auto;
+}
+
+#testa h1{
+display: none;
+}
+
+/*--------------------      IDIOMA   ------------------------*/
+
+#idioma{
+width: 1000px;
+min-height:50px;
+margin: 0px auto;
+border-bottom: dotted #666 1px;
+border-radius: 30px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+#idioma a:link.continente, #idioma a:visited.continente, #idioma a:hover.continente, #idioma a:active.continente{
+
+display: inline;
+font-size: 2.5em;
+font-weight: 300;
+color: #dddddd;
+text-decoration: none;
+border: none;
+
+}
+
+#idioma a:hover.continente{
+
+color: #aaaaaa;
+          -webkit-transition-property: color;
+          -webkit-transition-duration: 1s;
+          -moz-transition-property: color;
+          -moz-transition-duration: 1s;
+
+}
+
+#idioma a.language img{
+width: 20px;
+margin: 0px 10px;
+}
+
+/*--------------------------    CONTENT  ------------------------------*/
+
+#content{
+position:relative;
+width: 1000px;
+min-height: 600px;
+margin: 3px auto;
+display: flex;
+flex-wrap: wrap;
+
+}
+#content h5{
+text-align: center;
+color: #666;
+text-decoration: underline;
+margin: 0px 0px 10px 0px;
+}
+
+
+/* --------------------  CONTENT MENU ----------------------*/
+
+#content #menu{
+display:none;
+}
+
+
+
+/*----------------------- CONTENT FORM  ----------------------*/
+
+/*
+*   Form
+*/
+
+#content .reg {
+margin:10px;
+width: 478px;
+}
+#content .reg legend{
+margin:10px;
+padding:5px;
+font-size:0.8em;
+color:#555555;
+}
+
+#content .reg fieldset{
+border: 1px dotted #aaaaaa;
+border-radius: 10px;
+padding: 5px;
+}
+
+#content .reg label{
+width:180px;
+font-size:0.7em;
+color:#555555;
+display:inline-block;
+margin:5px 8px;
+}
+
+#content .reg input{
+width:200px;
+}
+
+
+
+/* STYLE div SLIDE    -------------------- FB_TORNEO (solo width) -------- */
+
+#content #slide, #fb_torneo{
+  width: 200px;
+}
+
+#slide #calendario, #gestire_torneo{
+  margin: 20px 0px 0px 0px;
+}
+
+#slide #calendario a:link, a:visited{
+  display: block;
+  color: #AAAAAA;
+  text-decoration: none;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+  font-size: 10px;
+  text-align: center;
+  border-bottom: dotted 1px #AAAAAA;
+  border-radius: 30px;
+}
+#slide #calendario a:hover{
+
+  font-size: 10px;
+  border-bottom: dotted 1px #333333;
+  color: #333333;
+            -webkit-transition-property: color;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: color;
+            -moz-transition-duration: 1s;
+
+}
+
+#slide #crea_torneo a:link, a:visited{
+  display: block;
+  width: 95%;
+  border-bottom:1px dotted #555555;
+  border-radius: 30px;
+  padding: 4px 0px 4px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#aaaaaa;
+}
+#slide #crea_torneo a:hover{
+  display: block;
+  width: 95%;
+  border-bottom:1px dotted #333333;
+  padding: 4px 0px 4px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size:10px;
+  text-align:center;
+  text-decoration:none;
+  color: #333333;
+}
+
+#slide #crea_torneo a:hover{
+
+  color: #333333;
+            -webkit-transition-property: color;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: color;
+            -moz-transition-duration: 1s;
+
+}
+
+#slide #registrar a:link, a:visited{
+  display: block;
+  width: 95%;
+  border-bottom:1px dotted #555555;
+  border-radius: 30px;
+  padding: 4px 0px 4px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#aaaaaa;
+}
+#slide #registrar a:hover{
+  display: block;
+  width: 95%;
+  border-bottom:1px dotted #333333;
+  padding: 4px 0px 4px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size:10px;
+  text-align:center;
+  text-decoration:none;
+  color: #333333;
+}
+
+#slide #registrar a:hover{
+
+  color: #333333;
+            -webkit-transition-property: color;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: color;
+            -moz-transition-duration: 1s;
+
+}
+
+  #slide #registrar a:link.rosso, a:visited.rosso{
+    color:#FF3333;
+    text-align: right;
+  }
+
+  #slide #registrar a:hover.rosso{
+    color:#FF3333;
+    text-align: right;
+  }
+
+  #slide #registrar input.rosso{
+    color:#FF3333;
+    margin:5px 0px 0px 70px;
+  }
+
+
+#slide #gestire_torneo{
+border-bottom: 1px dotted #333;
+border-radius: 30px;
+}
+
+#slide #gestire_torneo form{
+  font-size:10px;
+  text-align:center;
+  padding:3px;
+}
+#slide #gestire_torneo form label{
+  color:#555555;
+}
+#slide #gestire_torneo form input{
+  color:#333333;
+  margin:3px;
+}
+
+
+
+
+/* STYLE div CAMPIONATI   ---------   CAMPIONATI_PAESE ---------- TABLAS  ------- ( CALCOLO ? )--- REGISTRA */
+
+#content #campionati, #campionati_paese, #crea_calendario, #tablas, #registra, .faq {
+  width: 500px;
+  height:600px;
+  overflow: auto;
+}
+
+#content #campionati p.paese{
+  width: 33%;
+  text-align:center;
+  display: inline-block;
+  color: #666666;
+  /*margin: 5px 0px 10px 0px;*/
+  padding: 7px 0px;
+}
+
+#content #campionati_paese a:link, a:visited{
+  color: #AAAAAA;
+  display: inline-block;
+  text-align:center;
+  /*margin: 5px 0px 10px 0px;*/
+  padding: 7px 0px;
+  width: 33%;
+  font-size: 12px;
+  border-bottom: none;
+}
+
+#content #campionati_paese a:hover{
+  color: #AAAAAA;
+  display: inline-block;
+  text-align:center;
+  /*margin: 5px 0px 10px 0px;*/
+  padding: 7px 0px;
+  width: 33%;
+  font-size: 12px;
+  border-bottom: none;
+}
+
+
+#content #campionati_paese a:hover{
+
+  color: #333333;
+            -webkit-transition-property: color;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: color;
+            -moz-transition-duration: 1s;
+
+}
+
+#content #campionati_paese dl{
+  padding: 5px;
+}
+
+#content #campionati_paese dt{
+  font-size: 12px;
+}
+
+#content #campionati_paese dl dd a.torneo{
+  width: 100%;
+  border-bottom: 1px dotted #666666;
+  border-radius: 30px;
+}
+
+
+
+/* ------------------------- STYLE div CREA - CALENDARIO  -------------------  */
+
+
+#content #crea_calendario p{
+  text-align: center;
+}
+
+#content #crea_calendario .guida{
+  display:none;
+}
+
+#content #crea_calendario .content_float{
+  position:relative;
+  display:inline-block;
+  width:48%;
+  margin:auto;
+}
+
+#content #crea_calendario label{
+  font-size:0.7em;
+  color:#666666;
+  display:inline-block;
+  margin:4px 5px 4px 5px;
+}
+
+#content #crea_calendario button{
+  width: 100%;
+  margin: 10px 0px;
+}
+
+
+/*
+* ******************  Vissualizza Calendario
+*/
+
+    #visscalendario{
+      width: 100%;
+      margin: 5px auto;
+      display:flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    #visscalendario p{
+      text-align:center;
+      color: #666666;
+    }
+
+    #visscalendario #gio{
+      margin: 10px auto;
+      width: 30%;
+    }
+
+    #visscalendario #gio ul{
+      list-style:none;
+      font-size: 9px;
+      text-align:center;
+    }
+
+    #visscalendario #gio ul li{
+      padding:5px 3px;
+      border-bottom:solid 1px #333333;
+      border-radius: 30px;
+    }
+
+/* STYLE div PUBBLICITA     */
+#content #pubblicita{
+  background: #FFFFFF;
+  width: 300px;
+}
+
+#content #pubblicita #pubblat2, #pubb_1fijo{
+  display: none;
+}
+
+/* --------------------------- CONTENT TABLE  ------------------------ */
+
+
+#content .tabla p{
+margin: 2px 0px 2px 2px;
+padding: 0px 0px 0px 0px;
+}
+
+
+/*
+*  STYLE IMG
+*/
+
+#content .tabla img.sponsor{
+width:480px;
+height:200px;
+}
+
+#content .tabla img.vincitore{
+width:480px;
+}
+
+#content .tabla img.cup{
+display:none;
+}
+
+#content .tabla h5.campione{
+text-align:center;
+border-bottom:#CCCCCC dotted 2px;
+margin: 0px 0px 0px 0px;
+padding: 10px 3px 15px 3px;
+letter-spacing: 1em;
+font-weight: 300;
+}
+
+#content .tabla h1{
+font-weight: 300;
+text-align:center;
+}
+
+
+
+#content table{
+border-collapse:collapse;
+margin:5px auto 5px auto;
+color:#333333;
+font-size:0.8em;
+text-align:center;
+width: 100%;
+}
+#content table caption{
+color:#666666;
+padding:3px;
+}
+
+#content table td{
+padding: 2px;
+}
+
+#content table td, th{
+border: 1px solid #28a802;
+border-style: solid none;
+}
+
+
+#content table img{
+width: 12px;
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}
+
+#conten table a, a:link, a:hover, a:visited{
+border:none;
+display:inline;
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}
+
+#content table:hover{
+background-color: #95f4f2;
+          -webkit-transition-property: background-color;
+          -webkit-transition-duration: 1s;
+          -moz-transition-property: background-color;
+          -moz-transition-duration: 1s;
+
+}
+
+#content table tr:hover{
+background-color: #fdd60a;
+          -webkit-transition-property: background-color;
+          -webkit-transition-duration: 1s;
+          -moz-transition-property: background-color;
+          -moz-transition-duration: 1s;
+}
+
+
+
+
+#content table tr td.giornata{
+background-color: #333333;
+color:#ffff00;
+}
+
+
+/*
+*  ------------------------- FAQ domande frequenti ------------------
+*/
+
+#content .faq h1{
+text-align:center;
+color: #118dff;
+font-weight: 300;
+}
+
+#content .faq img{
+float:left;
+width: 50px;
+margin: 0px 10px 0px 0px;
+padding:0px 0px 0px 0px;
+}
+
+#content .faq p{
+line-height: 20px;
+color:#22AA00;
+padding: 5px 5px;
+}
+
+#content .faq p:first-line{
+color:#666666;
+}
+
+
+
+/*---------------------------     PIE   --------------------------------*/
+
+#pie{
+width: 1000px;
+min-height: 50px;
+margin: 0px auto;
+border-top: dotted #666 1px;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#pie p{
+margin: 5px;
+}
+
+#pie p a{
+color: #666666;
+}
+
+
+
+/* -------------------------------- COMMENTI  -----------------*/
+
+
+
+  #comenti{
+
+  width: 480px;
+  height:300px;
+  overflow: auto;
+
+  }
+  /*
+  #content #calendario form{
+    font-size:0.7em;
+    text-align:center;
+    padding:3px;
+  }
+  #content #calendario form label{
+    color:#555555;
+  }
+  #content #calendario form input{
+    color:#333333;
+    margin:3px;
+  }
+  */
+
+  #comenti .data{
+    float: right;
+    color: #AAAAAA;
+
+  }
+
+  #comenti dl{
+
+    margin:5px;
+    padding:5px;
+    border: 1px solid #CCCCCC;
+    font-size: 0.7em;
+    border-radius:25px 10px 25px 10px;
+
+  }
+
+  #comenti dl dt{
+
+    margin: 5px;
+
+  }
+
+  #comenti dl dd{
+
+    margin: 5px auto;
+    width: 90%;
+    line-height: 20px;
+  }
+
+  #comenti dl:nth-child(even) {
+
+    background-color: #ccffff;
+
+  }
+  </style>
+
 
 </body>
 </html>
